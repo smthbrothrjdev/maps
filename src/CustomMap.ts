@@ -15,17 +15,28 @@ export class CustomMap {
     );
   }
 
+  //TODO implement dynamic info windows
   addMarker(location: placeable): void {
-    new google.maps.Marker({
+    const marker = new google.maps.Marker({
       position: location.location,
       map: this.map,
+    });
+
+    const infoWindow = new google.maps.InfoWindow({
+      content: location.markerContent(),
+    });
+
+    marker.addListener("click", () => {
+      infoWindow.open(this.map, marker);
     });
   }
 }
 
-interface placeable {
+export interface placeable {
   location: {
     lat: number;
     lng: number;
   };
+
+  markerContent(): string;
 }
