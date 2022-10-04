@@ -35,7 +35,15 @@ export class CustomMap {
               lng: position.coords.longitude,
             };
 
-            console.log(pos);
+            this.addMarker({
+              location: {
+                lat: pos.lat,
+                lng: pos.lng,
+              },
+              markerContent: () => {
+                return "Your Location";
+              },
+            });
           },
           () => {
             handleLocationError(true, this.infoWindow, this.map.getCenter()!);
