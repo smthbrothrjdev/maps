@@ -15,18 +15,17 @@ export class CustomMap {
     );
   }
 
-  addMarker(location: placeable) {
+  addMarker(location: placeable): void {
     new google.maps.Marker({
-      position: {
-        lat: location.lat,
-        lng: location.long,
-      },
+      position: location.location,
       map: this.map,
     });
   }
 }
 
 interface placeable {
-  lat: number;
-  long: number;
+  location: {
+    lat: number;
+    lng: number;
+  };
 }
