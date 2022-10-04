@@ -26,4 +26,6 @@ export class Company implements placeable {
     </div>
   `;
   }
+
+  
 }
