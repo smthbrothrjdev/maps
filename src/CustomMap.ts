@@ -41,9 +41,7 @@ export class CustomMap {
                 lng: pos.lng,
               },
               markerContent: () => {
-                return position.coords.altitude
-                  ? `${position.coords.altitude}`
-                  : "undefined ";
+                return "Your Current Location";
               },
             });
           },
