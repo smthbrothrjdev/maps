@@ -11,7 +11,7 @@ const company = new Company();
 
 const geoButton = document.getElementById("geolocate");
 
-geoButton?.addEventListener
+//geoButton?.addEventListener
 
 
 map.addMarker(user);
