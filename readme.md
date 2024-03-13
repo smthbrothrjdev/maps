@@ -9,5 +9,3 @@ npm install @types/google.maps ----> index.ts -->>> ///<reference types="@types/
 npm
 
 import {faker} from " @faker-js/faker"
-
-AIzaSyDE-usXmdZ1K7oGbzGw_IUM55fyY0GVa48
